@@ -1,85 +1,122 @@
-Hospital Management System
-Overview
-The Hospital Management System is a Python-based desktop application designed to streamline hospital operations, including patient management, appointment scheduling, and consultation tracking. It uses SQLite for data storage, Tkinter for the GUI, and implements data structures like linked lists and priority queues for efficient data handling. The system supports two user roles: Receptionist and Doctor, each with specific functionalities.
-Features
+# 🏥 Hospital Management System
 
-Receptionist Panel:
-Add new patients with validation for patient ID and phone number.
-Schedule appointments with priority levels (Critical, Urgent, Normal).
-View the appointment schedule.
-Search patients by ID or phone number.
-View consultation records.
+[![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
+*A desktop application built with Python, SQLite, and Tkinter for efficient hospital/clinic management.*
 
-Doctor Panel:
-Complete the next scheduled appointment by recording consultation details (diagnosis, cost, notes).
+---
 
+## 📑 Table of Contents
 
-Data Management:
-SQLite database for storing patients, appointments, and consultations.
-Linked list for in-memory patient data management.
-Priority queue for scheduling appointments based on priority and time.
+1. [✨ Features](#✨-features)
+2. [🛠️ Technologies](#🛠️-technologies)
+3. [🚀 Quick Start](#🚀-quick-start)
+4. [📂 Project Structure](#📂-project-structure)
+5. [📋 Usage](#📋-usage)
+6. [🛡️ Contributing](#🛡️-contributing)
+7. [⚖️ License](#⚖️-license)
 
+---
 
-Security:
-Role-based login system with the following credentials:
-Receptionist: Username: reception, Password: reception123
-Doctor: Username: doctor, Password: doctor123
+## ✨ Features
 
+* **Role-Based Access**: Separate panels for Receptionist and Doctor.
+* **Patient Management**: Add, search, and remove patients with validation.
+* **Appointment Scheduling**: Prioritize (Critical, Urgent, Normal) and sort by time.
+* **Consultation Logging**: Record diagnosis, cost, and notes; track completed visits.
+* **Persistent Storage**: SQLite database (`hospital.db`) auto-creates tables on first run.
+* **User-Friendly UI**: Built on Tkinter with clear forms and tables.
 
+---
 
+## 🛠️ Technologies
 
+* **Python 3.x**
+* **SQLite** (via `sqlite3` module)
+* **Tkinter** (GUI toolkit)
+* **Dataclasses** & **heapq** (in-memory data handling)
 
-Prerequisites
+---
 
-Python 3.6 or higher
-Required Python libraries: sqlite3, tkinter (usually included with Python), datetime, heapq, dataclasses, re
+## 🚀 Quick Start
 
-Installation
+1. **Clone repository**
 
-Clone the repository:git clone https://github.com/username/hospital-management-system.git
+   ```bash
+   git clone https://github.com/your-username/hospital-management-system.git
+   cd hospital-management-system
+   ```
 
+2. **(Optional) Create virtual environment**
 
-Navigate to the project directory:cd hospital-management-system
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Windows: venv\Scripts\activate
+   ```
 
+3. **Install dependencies**
 
-Run the application:python hospital_management.py
+   > *No external dependencies; uses standard library*
+   > If you add extras, list them in `requirements.txt` and run:
 
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+4. **Run application**
 
-Usage
+   ```bash
+   python app.py
+   ```
 
-Launch the application using the command above.
-Select a role (Receptionist or Doctor) and log in with the provided credentials:
-Receptionist: reception / reception123
-Doctor: doctor / doctor123
+   * **Receptionist**: `reception` / `reception123`
+   * **Doctor**:       `doctor`    / `doctor123`
 
+---
 
-Use the respective panels to manage patients, appointments, or consultations.
-Log out to return to the login screen.
+## 📂 Project Structure
 
-Database Schema
+```text
+hospital-management-system/
+├── app.py                # Main application script
+├── hospital.db           # SQLite database (auto-generated)
+├── requirements.txt      # (Optional) Python dependencies
+├── LICENSE               # MIT License
+└── README.md             # Project documentation
+```
 
-patients: Stores patient details (patient_id, name, age, gender, contact, medical_history).
-appointments: Stores appointment details (appointment_id, patient_id, appointment_time, priority, status).
-consultations: Stores consultation details (consultation_id, appointment_id, diagnosis, cost, blood_type, other_questions).
+---
 
-Project Structure
+## 📋 Usage
 
-hospital_management.py: Main application code containing all classes and logic.
-hospital.db: SQLite database file (created automatically on first run).
+### Receptionist Panel
 
-Future Improvements
+1. **Add Patient**: Enter ID (4–5 digits), Name, Age, Gender, Contact (09xx or 07xx), Medical History.
+2. **Schedule Appointment**: Select patient, choose date/time (`YYYY-MM-DD HH:MM`), set priority (1–3).
+3. **View Schedule**: See upcoming appointments sorted by priority & time.
+4. **Search Patient**: Lookup by ID or phone number.
+5. **View Consultations**: Review completed consultations.
 
-Add support for multiple doctors and scheduling conflicts.
-Implement patient record editing and deletion.
-Enhance security with proper user authentication and password hashing.
-Add reporting features for consultations and appointments.
-Improve the UI with a more modern design.
+### Doctor Panel
 
-Contributing
-Contributions are welcome! Please fork the repository, create a new branch, and submit a pull request with your changes.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-Contact
-For questions or suggestions, please open an issue on the GitHub repository or contact the maintainer at yonasleykun27@gmail.com.
+1. **Complete Next Appointment**: Pops next scheduled appointment.
+2. **Consultation Form**: Enter diagnosis, cost, notes; marks appointment as completed.
+
+---
+
+## 🛡️ Contributing
+
+1. **Fork** the repo
+2. **Branch**: `git checkout -b feature/YourFeature`
+3. **Commit**: `git commit -m "Add awesome feature"`
+4. **Push**: `git push origin feature/YourFeature`
+5. **PR**: Open a Pull Request
+
+*Please follow [Contributor Guidelines](CONTRIBUTING.md) if available.*
+
+---
+
+## ⚖️ License
+
+This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.

@@ -32,7 +32,7 @@
 
 ## 🛠️ Technologies
 
-* **Python 3.x**
+* **Python 3.13.3**
 * **SQLite** (via `sqlite3` module)
 * **Tkinter** (GUI toolkit)
 * **Dataclasses** & **heapq** (in-memory data handling)

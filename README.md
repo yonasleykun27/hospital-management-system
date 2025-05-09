@@ -1,6 +1,6 @@
 # 🏥 Hospital Management System
 
-[![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/)
+[![Python Version](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 *A desktop application built with Python, SQLite, and Tkinter for efficient hospital/clinic management.*

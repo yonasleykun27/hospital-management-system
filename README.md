@@ -7,6 +7,17 @@
 
 ---
 
+## 👥 Group Members
+
+| No. | Name                  | ID          |
+|-----|-----------------------|-------------|
+| 1.  | YEABSIRA WONDWOSEN    | DBU1601732  |
+| 2.  | DEREJE HAILEMESKEL    | DBU1601105  |
+| 3.  | YONAS LEYKUN          | DBU1601770  |
+| 4.  | ASAMEN AGZI           | DBU1601394  |
+
+---
+
 ## 📑 Table of Contents
 
 1. [✨ Features](#✨-features)
